@@ -1,0 +1,145 @@
+body {
+  color: #000;
+  background-color: #f7f7f7;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.show {
+  display: block !important;
+}
+
+.onHover:hover {
+  border-color: #000 !important;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 10px;
+  padding: 10px 20px;
+  line-height: 1.3;
+  letter-spacing: 2px;
+  color: #3f51b5;
+}
+
+.books {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
+@media (max-width: 1300px) {
+  .books {
+    grid-template-columns: 1fr;
+  }
+}
+
+.books .card {
+  background-color: rgba(97, 125, 152, 0.2);
+  box-shadow: 0px 2px 15px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 0 5px;
+  padding: 30px 60px;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  border-right: 1px solid rgb(97, 125, 152);
+  border-top: 1px solid rgb(97, 125, 152);
+  max-width: fit-content;
+}
+
+.books .card .best_seller {
+  margin: 0;
+  padding: 5px 20px;
+  position: absolute;
+  top: 15px;
+  left: -130px;
+  width: 300px;
+  text-align: center;
+  color: #f00;
+  background-color: #ffeb3b;
+  font-weight: bold;
+  font-size: 18px;
+  transform: rotate(300deg);
+}
+
+.books .card .num {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  font-size: 26px;
+  background-color: rgb(97, 125, 152);
+  color: #d9dfe4;
+  overflow: hidden;
+  border-radius: 0 0 0 5px;
+}
+
+.books .card .img {
+  margin: auto;
+  width: 200px;
+  height: 300px;
+  cursor: pointer;
+}
+.books .card img {
+  width: 100%;
+  height: 100%;
+}
+
+.books .card .title {
+  width: fit-content;
+  font-size: 22px;
+  padding-bottom: 3px;
+  color: #3f51b5;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  text-transform: capitalize;
+  text-align: center;
+  margin: 5px auto;
+}
+
+.books .card .author {
+  max-width: fit-content;
+  font-size: 16px;
+  padding-bottom: 3px;
+  color: #607d8b;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 5px auto;
+  word-break: break-word;
+}
+
+.openBook {
+  display: none;
+  user-select: none;
+}
+
+.opend {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.opend img {
+  position: relative;
+  width: 400px !important;
+  height: 550px !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  background-color: #f7f7f7;
+  border-radius: 7px;
+  cursor: auto;
+}
